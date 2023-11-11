@@ -1,0 +1,80 @@
+/*for anything with id gameboard*/
+#gameboard{
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+
+}
+
+/* Style the span inside the paragraph */
+#player {
+    font-weight: bold;
+    color: #14a3b6; /* Text color for the player's name */
+}
+
+/*we create a class of square*/
+.square {
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+/*if an element has a cass of square also has svg in it */
+.square svg {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    position: relative;
+    /*making sure this is always behind square*/
+    z-index: -9;
+
+}
+
+path{
+    position: relative;
+    /*making sure path is always behing svg*/
+    z-index: -10;
+}
+
+.piece {
+    position: relative;
+    /*piece always will be in front of square. The first thing*/
+    z-index: 9;
+}
+
+.beige {
+    background-color: #d3ae89;
+}
+
+.brown{
+    background-color: #884301;
+}
+
+/*svgs work with fill*/
+.black{
+    fill: rgb(0, 0, 0);
+}
+
+.white{
+    fill: rgb(255, 255, 255);
+}
